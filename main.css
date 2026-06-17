@@ -1,0 +1,264 @@
+/* === Общий стиль === */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color:#222;
+    background:#f8f8fb;
+    margin:0;
+    padding:0;
+    line-height:1.6;
+  }
+  
+  /* === Контейнеры === */
+  section {
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 40px;
+  }
+  
+  /* === Заголовки === */
+  h2 {
+    font-size:2em;
+    font-weight:700;
+    margin-bottom:20px;
+    color:#111;
+    border-left:4px solid #0077ff;
+    padding-left:10px;
+  }
+  
+  /* === Блок "О себе" === */
+  #about {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.05);
+    padding:40px;
+  }
+  
+  .profile-photo {
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #0077ff;
+    box-shadow:0 0 20px rgba(0,119,255,0.3);
+  }
+  
+  .about-text {
+    flex:1;
+    font-size:1.05em;
+    color:#333;
+  }
+  
+  /* === Навыки === */
+  .skill {
+    margin:25px 0;
+  }
+  
+  .skill-label {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:8px;
+  }
+  
+  .skill-icon {
+    width:28px;
+    height:28px;
+    object-fit:contain;
+  }
+  
+  .skill-name {
+    font-weight:600;
+    color:#000;
+  }
+  
+  .skill-bar {
+    position:relative;
+    height:25px;
+    background:#e9ecf3;
+    border-radius:15px;
+    overflow:hidden;
+  }
+  
+  .skill-fill {
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:var(--level, 80%);
+    background:linear-gradient(90deg, #0077ff, #00ffcc);
+    border-radius:15px;
+    transition:width 1.5s ease;
+  }
+  
+  .skill-percent {
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    font-weight:600;
+    color:#000;
+  }
+  
+  
+  /* === Проекты === */
+  #projects {
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.05);
+    padding:40px;
+  }
+  
+  .project-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:30px;
+  }
+  
+  .project-card {
+    background:#f9f9f9;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    transition:transform 0.3s;
+  }
+  .project-card:hover {
+    transform:translateY(-5px);
+  }
+  
+  /* === Футер === */
+  footer {
+    background:linear-gradient(90deg, #0077ff, #00ffcc);
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    font-size:0.9em;
+    letter-spacing:0.5px;
+  }
+
+  header {
+    text-align:center;
+    padding:30px 0;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  }
+  header h1 {
+    font-size:2em;
+    margin-bottom:5px;
+  }
+  header p {
+    color:#555;
+    margin-bottom:15px;
+  }
+  nav a {
+    color:#0077ff;
+    margin:0 10px;
+    text-decoration:none;
+    font-weight:500;
+  }
+  nav a:hover {
+    text-decoration:underline;
+  }
+  
+  /* Опыт */
+  #experience {
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.05);
+    padding:40px;
+  }
+  .experience-item {
+    margin-bottom:20px;
+  }
+  .experience-item h3 {
+    color:#0077ff;
+    margin-bottom:5px;
+  }
+  
+  /* Контакты */
+  #contact {
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.05);
+    padding:40px;
+  }
+  form {
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:400px;
+    margin:0 auto;
+  }
+  input, textarea {
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:10px;
+    font-size:1em;
+  }
+  button {
+    background:linear-gradient(90deg, #0077ff, #00ffcc);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:10px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  button:hover {
+    background:linear-gradient(90deg, #00ffcc, #0077ff);
+  }
+  
+
+  .skill-name::before {
+    content: url('icons/html5.svg'); /* пример для HTML */
+    margin-right:8px;
+    vertical-align:middle;
+  }
+  
+  .experience-item::before {
+    content:"💻";
+    margin-right:10px;
+    size: 50px;
+  }
+
+  .experience-item:nth-child(2)::before {
+    content: "🧪";
+    margin-right: 10px;
+  }
+  
+  
+  .project-card h3::before {
+    content:"📊";
+    margin-right:8px;
+  }
+
+  .project-card:nth-child(2) h3::before {
+    content: "🌐";
+    margin-right: 8px;
+  }
+  
+  
+  #contact h2::before {
+    content:"✉️";
+    margin-right:10px;
+  }
+  
+
+  header h1, header p, nav a {
+    animation:fadeIn 1s ease forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity:0; transform:translateY(-10px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+  
+  .header-line {
+    border:none;
+    height:3px;
+    background:#0077ff;
+    margin:0px 0;
+  }
+  
